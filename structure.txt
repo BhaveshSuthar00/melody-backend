@@ -1,0 +1,44 @@
+src/
+├── app.module.ts        # Root module of the application
+├── config/              # Configuration files for environment variables and other settings
+│   ├── database.config.ts  # MongoDB connection and configuration
+│   ├── app.config.ts       # General application settings
+│   └── env/                # Separate environment-specific configs
+├── common/              # Shared utilities and reusable components
+│   ├── decorators/       # Custom decorators
+│   ├── dto/              # Data Transfer Objects
+│   ├── filters/          # Exception filters
+│   ├── guards/           # Auth and role guards
+│   ├── interceptors/     # Interceptors for request/response
+│   ├── interfaces/       # Shared interfaces and types
+│   ├── pipes/            # Validation and transformation pipes
+│   └── utils/            # Utility functions
+├── modules/             # Feature modules
+│   ├── user/             # User module
+│   │   ├── user.controller.ts
+│   │   ├── user.service.ts
+│   │   ├── user.module.ts
+│   │   ├── schemas/       # MongoDB schemas for the module
+│   │   │   └── user.schema.ts
+│   │   ├── dto/           # DTOs for user module
+│   │   │   ├── create-user.dto.ts
+│   │   │   └── update-user.dto.ts
+│   │   └── interfaces/    # Module-specific interfaces
+│   │       └── user.interface.ts
+│   ├── auth/             # Authentication module
+│   │   ├── auth.controller.ts
+│   │   ├── auth.service.ts
+│   │   ├── auth.module.ts
+│   │   ├── strategies/    # Passport strategies
+│   │   ├── guards/        # Guards specific to auth
+│   │   └── dto/           # DTOs for auth
+│   └── ...               # Other feature modules (e.g., Product, Orders)
+├── database/            # MongoDB connection and seeding scripts
+│   ├── database.module.ts
+│   ├── database.providers.ts
+│   └── seeds/
+├── middleware/          # Global or route-specific middleware
+├── main.ts              # Entry point of the application
+└── tests/               # Unit and integration tests
+    ├── e2e/             # End-to-end tests
+    └── unit/            # Unit tests
